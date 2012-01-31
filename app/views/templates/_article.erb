@@ -1,0 +1,4 @@
+<div id="article<%=number%>" class="article">
+<%=number%>. <%= link_to article.title, linkOrShow(article)%><br>
+<sup><%=distance_of_time_in_words_to_now(article.created_at)+" ago "%>        |<%= link_to "\tDiscuss", showArticle_url(article.id),:style => "color:#999999"%></sup>
+</div>

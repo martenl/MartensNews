@@ -1,0 +1,3 @@
+<% @articles.each_index do |number|%>
+<%= render "templates/article",:article => @articles[number],:number => number+1%>
+<% end%>

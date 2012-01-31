@@ -1,0 +1,7 @@
+<div id="footer">
+	<% if params[:offset] != nil%>
+	  <%= link_to  "Next Page",index_url(params[:offset].to_i() +1)%>
+	<% else %>
+	  <%= link_to "Startpage",index_url(0)%>
+	  <% end%>
+</div>

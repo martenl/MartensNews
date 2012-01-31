@@ -1,0 +1,14 @@
+<h1><%=@article.title%></h1>
+
+<%= form_for @comment, :url => addComment_url do |f| %>
+  <%= f.label :text,"Comment"%>
+  <%= f.text_area :text ,:cols => 30,:rows=>10%> <br>
+  <input type="hidden" id="articleID" name="comment[articleID]" value="<%=@article.id%>" />
+  <%= f.submit "Submit" %>
+<% end %>
+
+<br><br>
+
+<% @comments.each do |comment|%>
+<%= render "templates/comment",:comment=>comment%>
+<%end%>
